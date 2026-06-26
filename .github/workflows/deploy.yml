@@ -16,9 +16,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: f0f92bdb9cdfe5eafbc27dc509009def
-          command: pages deploy public --project-name=nature-and-nations --branch=main
+          node-version: '20'
+
+      - name: Deploy to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.NATUREANDNATIONS_WEBSITE_API }}
+          CLOUDFLARE_ACCOUNT_ID: f0f92bdb9cdfe5eafbc27dc509009def
+        run: npx --yes wrangler@4 pages deploy public --project-name=nature-and-nations --branch=main
