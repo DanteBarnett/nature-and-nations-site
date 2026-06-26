@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ===== Primary SEO ===== -->
+<title>Nature &amp; Nations — Planet-Scale City-Builder &amp; Nature Simulation</title>
+<meta name="description" content="Nature & Nations is a planet-scale city-builder and nature simulation. Raise civilizations on a living, real-world Earth and tend a world that answers back. Coming 2026 — wishlist on Steam." />
+<meta name="keywords" content="Nature and Nations, planet-scale city builder, nature simulation game, city building game, Earth simulation, build a civilization, ecology simulation, grand strategy city builder, Unreal Engine 5 game, Steam city builder 2026" />
+<meta name="author" content="Dante Barnett" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#07201f" />
+<link rel="canonical" href="https://natureandnations.com/" />
+<link rel="icon" href="nn-crest.png" />
+<link rel="apple-touch-icon" href="nn-crest.png" />
+
+<!-- ===== Open Graph ===== -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Nature & Nations" />
+<meta property="og:title" content="Nature & Nations — Planet-Scale City-Builder & Nature Simulation" />
+<meta property="og:description" content="Raise civilizations on a living, real-world Earth and tend a world that answers back. A planet-scale city-builder & nature simulation. Coming 2026." />
+<meta property="og:url" content="https://natureandnations.com/" />
+<meta property="og:image" content="https://natureandnations.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Nature & Nations — a planet-scale city-builder and nature simulation" />
+
+<!-- ===== Twitter ===== -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Nature & Nations — Planet-Scale City-Builder & Nature Simulation" />
+<meta name="twitter:description" content="Raise civilizations on a living Earth and tend a world that answers back. Coming 2026 — wishlist on Steam." />
+<meta name="twitter:image" content="https://natureandnations.com/og-image.png" />
+
+<!-- ===== Structured data ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "VideoGame",
+      "name": "Nature & Nations",
+      "url": "https://natureandnations.com/",
+      "image": "https://natureandnations.com/og-image.png",
+      "description": "A planet-scale city-builder and nature simulation. Raise civilizations on a living, real-world Earth and tend a world that responds to every choice.",
+      "genre": ["City-building", "Simulation", "Strategy"],
+      "gamePlatform": ["PC", "Steam"],
+      "operatingSystem": "Windows (macOS after launch; Linux/Steam Deck planned)",
+      "applicationCategory": "Game",
+      "author": { "@type": "Person", "name": "Dante Barnett" },
+      "publisher": { "@type": "Organization", "name": "Nature & Nations" }
+    },
+    {
+      "@type": "Organization",
+      "name": "Nature & Nations",
+      "url": "https://natureandnations.com/",
+      "logo": "https://natureandnations.com/nn-crest.png",
+      "email": "dantebarnett@natureandnations.com"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is Nature & Nations?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nature & Nations is a planet-scale city-builder and nature simulation. You raise civilizations on a living, real-world Earth and tend a world that responds to every choice you make." } },
+        { "@type": "Question", "name": "What kind of game is it?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It blends a city-builder, a grand-strategy nation simulation, and a living ecology sim, built on Unreal Engine 5.8." } },
+        { "@type": "Question", "name": "When does Nature & Nations release?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nature & Nations is coming in 2026. Wishlist it on Steam to be notified the moment it launches." } },
+        { "@type": "Question", "name": "What platforms will it be on?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It launches on PC (Windows) via Steam, with macOS support after launch and Linux / Steam Deck planned." } },
+        { "@type": "Question", "name": "Is it single-player?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Play Greenfield mode building the only civilization on an untouched world, or Living Nations mode in a world of rival AI nations that trade, scheme, and war." } },
+        { "@type": "Question", "name": "Does it use real Earth geography?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The world is modeled on the real Earth, with true terrain, climate, weather, and biomes from pole to equator." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Spectral:ital,wght@0,400;0,500;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --abyss:#07201f; --petrol:#0d3330; --petrol-lift:#15514b;
+    --gold:#c9a24b; --gold-bright:#e6cd8f; --parchment:#ece3cf;
+    --parchment-dim:rgba(236,227,207,.72); --hair:rgba(201,162,75,.26);
+    --display:"Fraunces",Georgia,"Times New Roman",serif;
+    --prose:"Spectral",Georgia,serif;
+    --mono:"Space Mono",ui-monospace,"Courier New",monospace;
+    --measure:64ch; --pad-section:clamp(4.5rem,10vh,8rem);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+  body{margin:0;background:radial-gradient(120% 90% at 50% -10%,#0b2b29 0%,var(--abyss) 60%) fixed,var(--abyss);
+    color:var(--parchment);font-family:var(--prose);font-size:clamp(1rem,.95rem + .25vw,1.15rem);
+    line-height:1.72;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+
+  #topo{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block;}
+  .vignette{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(120% 80% at 50% 35%,transparent 55%,rgba(4,18,17,.72) 100%);}
+  .grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;mix-blend-mode:overlay;background-image:radial-gradient(rgba(255,255,255,.5) .5px,transparent .5px);background-size:3px 3px;}
+  .wrap{position:relative;z-index:2;}
+  .container{width:min(100% - 2.4rem,1080px);margin-inline:auto;}
+  .narrow{max-width:var(--measure);}
+
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin:0 0 1.1rem;display:flex;align-items:center;gap:.7rem;}
+  .eyebrow::before{content:"";width:1.6rem;height:1px;background:var(--gold);opacity:.7;}
+  h1,h2,h3{font-family:var(--display);font-weight:900;line-height:1.04;letter-spacing:-.015em;margin:0;color:var(--parchment);}
+  h2{font-weight:600;font-size:clamp(2rem,1.3rem + 2.6vw,3.3rem);letter-spacing:-.01em;}
+  h3{font-weight:600;font-size:clamp(1.35rem,1.1rem + 1vw,1.95rem);}
+  p{margin:0 0 1.1rem;color:var(--parchment-dim);}
+  strong{color:var(--parchment);font-weight:500;}
+  em{font-style:italic;}
+  a{color:var(--gold-bright);text-decoration:none;}
+
+  .skip{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--abyss);padding:.6rem 1rem;font-family:var(--mono);font-size:.8rem;z-index:50;}
+  .skip:focus{left:1rem;top:1rem;}
+  :focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.76rem;letter-spacing:.14em;
+    text-transform:uppercase;padding:.95rem 1.6rem;border-radius:3px;text-decoration:none;cursor:pointer;
+    border:1px solid var(--gold);transition:background .2s,color .2s,border-color .2s,transform .2s;}
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--gold);color:var(--abyss);font-weight:700;}
+  .btn-primary:hover{background:var(--gold-bright);border-color:var(--gold-bright);}
+  .btn-ghost{background:transparent;color:var(--gold-bright);}
+  .btn-ghost:hover{background:rgba(201,162,75,.12);}
+  .cta-row{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;}
+  .cta-note{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--parchment-dim);}
+
+  /* nav */
+  .nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+    padding:.6rem clamp(1.1rem,4vw,2.4rem);background:rgba(7,32,31,.82);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,162,75,.18);}
+  .brand{display:flex;align-items:center;gap:.7rem;font-family:var(--display);font-weight:600;font-size:1.1rem;flex-shrink:0;color:var(--parchment);text-decoration:none;}
+  .brand img{height:54px;width:auto;filter:drop-shadow(0 3px 10px rgba(0,0,0,.45));}
+  .brand span{color:var(--gold);font-style:italic;font-weight:400;}
+  .nav-links{display:flex;align-items:center;gap:.2rem;overflow-x:auto;scrollbar-width:none;}
+  .nav-links::-webkit-scrollbar{display:none;}
+  .nav-link{font-family:var(--mono);font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;color:var(--parchment-dim);
+    padding:.6rem .7rem;white-space:nowrap;border-bottom:2px solid transparent;transition:color .2s;}
+  .nav-link:hover{color:var(--parchment);}
+  .nav-link.active{color:var(--gold-bright);border-bottom-color:var(--gold);}
+  .nav-cta{margin-left:.4rem;padding:.55rem 1rem;font-size:.64rem;}
+  @media (max-width:860px){ .nav-links .nav-link{display:none;} .nav-links .nav-cta{display:inline-flex;} }
+
+  /* hero */
+  .hero{min-height:90svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:4rem 1.4rem 3.5rem;scroll-margin-top:90px;}
+  .hero .crest{height:clamp(190px,26vw,300px);width:auto;filter:drop-shadow(0 14px 40px rgba(0,0,0,.55));margin-bottom:1.6rem;}
+  .hero h1{font-size:clamp(2.9rem,2rem + 6vw,6.6rem);}
+  .hero h1 .amp{font-weight:400;font-style:italic;color:var(--gold);padding:0 .12em;}
+  .hero .sub{font-family:var(--mono);font-size:clamp(.72rem,.68rem + .2vw,.9rem);letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin:1.4rem 0 0;}
+  .hero .hook{font-family:var(--prose);font-style:italic;font-size:clamp(1.15rem,1rem + .8vw,1.55rem);line-height:1.5;color:var(--parchment);max-width:34ch;margin:1.8rem auto 0;}
+  .badges{display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center;margin-top:1.8rem;}
+  .badge{font-family:var(--mono);font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;color:var(--parchment-dim);border:1px solid var(--hair);border-radius:2px;padding:.42rem .7rem;}
+  .badge strong{color:var(--gold);font-weight:400;}
+  .hero .cta-row{justify-content:center;margin-top:2rem;}
+
+  .section{padding-block:var(--pad-section);scroll-margin-top:84px;}
+  .section + .section{border-top:1px solid rgba(201,162,75,.12);}
+  .lede{font-size:clamp(1.1rem,1rem + .5vw,1.4rem);color:var(--parchment);line-height:1.55;}
+
+  /* pillar stations */
+  .stations{margin-top:1rem;}
+  .station{display:grid;grid-template-columns:5.5rem 1fr;gap:clamp(1rem,3vw,2.4rem);padding-block:clamp(2.2rem,5vh,3.2rem);}
+  .station + .station{border-top:1px solid rgba(201,162,75,.12);}
+  .station .marker{display:flex;flex-direction:column;align-items:flex-start;gap:.8rem;}
+  .station .glyph{width:46px;height:46px;opacity:.85;}
+  .station .name{font-family:var(--mono);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--parchment-dim);}
+  .station h3{margin-bottom:.6rem;}
+  .station .body{max-width:60ch;}
+  .station .body p:last-child{margin-bottom:0;}
+
+  /* disclosure (style/biome/etc.) */
+  .styledrop{margin-top:1.3rem;border-top:1px solid var(--hair);max-width:62ch;}
+  .styledrop summary{list-style:none;cursor:pointer;font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);padding:.95rem 0;display:flex;align-items:center;gap:.6rem;}
+  .styledrop summary::-webkit-details-marker{display:none;}
+  .styledrop summary::after{content:"+";margin-left:auto;font-size:1.1rem;line-height:1;color:var(--gold);}
+  .styledrop[open] summary::after{content:"\2212";}
+  .styledrop summary:hover{color:var(--gold-bright);}
+  .stylegroup .gh{font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--parchment-dim);margin:1rem 0 .2rem;}
+  .styitem{display:grid;grid-template-columns:1fr auto;gap:.15rem .8rem;align-items:baseline;padding:.6rem 0;border-top:1px solid rgba(201,162,75,.1);}
+  .styitem .sn{font-family:var(--display);font-weight:600;font-size:1.06rem;color:var(--parchment);}
+  .styitem .sp{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .45rem;border:1px solid;border-radius:2px;white-space:nowrap;justify-self:end;}
+  .sp.avail{color:#9fcf9f;border-color:rgba(159,207,159,.5);}
+  .sp.dev{color:#e0b15a;border-color:rgba(224,177,90,.5);}
+  .sp.plan{color:var(--parchment-dim);border-color:var(--hair);}
+  .sp.cfg{color:var(--gold-bright);border-color:rgba(230,205,143,.55);}
+  .styitem .sd{grid-column:1 / -1;font-size:.88rem;color:var(--parchment-dim);margin:.1rem 0 0;}
+  .drop-note{font-family:var(--prose);font-style:italic;font-size:.92rem;color:var(--parchment-dim);margin:.7rem 0 0;}
+
+  /* two emotions / modes */
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:2.4rem;}
+  .card{border:1px solid var(--hair);border-radius:2px;padding:1.6rem 1.5rem;background:linear-gradient(180deg,rgba(21,81,75,.18),rgba(7,32,31,.1));}
+  .card .k{font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;}
+  .card h3{margin-bottom:.5rem;}
+  .card p{margin:0;font-size:.98rem;}
+  .fuse{text-align:center;font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(1.1rem,1rem + .6vw,1.5rem);color:var(--gold-bright);margin-top:1.6rem;}
+
+  /* release block */
+  .release{background:linear-gradient(180deg,var(--abyss),#06181a);border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);text-align:center;}
+  .rel-when{font-family:var(--display);font-weight:900;font-size:clamp(2.4rem,1.5rem + 4vw,4.4rem);color:var(--gold-bright);line-height:1;margin:.4rem 0 0;}
+  .platforms{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;max-width:760px;margin:2.6rem auto 0;text-align:left;}
+  .plat{border:1px solid var(--hair);border-radius:2px;padding:1.2rem 1.3rem;background:rgba(21,81,75,.12);}
+  .plat .when{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;}
+  .plat .what{font-family:var(--display);font-weight:600;font-size:1.2rem;color:var(--parchment);}
+  .plat p{margin:.3rem 0 0;font-size:.86rem;}
+  .engine{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--parchment-dim);margin-top:2rem;}
+
+  /* faq */
+  .faq details{border-bottom:1px solid rgba(201,162,75,.14);}
+  .faq summary{list-style:none;cursor:pointer;font-family:var(--display);font-weight:600;font-size:clamp(1.1rem,1rem + .5vw,1.35rem);color:var(--parchment);padding:1.2rem 0;display:flex;align-items:center;gap:1rem;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{content:"+";margin-left:auto;color:var(--gold);font-family:var(--mono);font-size:1.2rem;}
+  .faq details[open] summary::after{content:"\2212";}
+  .faq summary:hover{color:var(--gold-bright);}
+  .faq .ans{padding:0 0 1.3rem;max-width:64ch;color:var(--parchment-dim);}
+
+  /* footer */
+  .footer{padding-block:clamp(3.5rem,8vh,6rem);text-align:center;border-top:1px solid var(--gold);}
+  .footer img{height:96px;width:auto;margin-bottom:1.2rem;opacity:.95;}
+  .footer .closing{font-family:var(--prose);font-style:italic;font-size:1.2rem;color:var(--parchment);max-width:38ch;margin:0 auto 1.6rem;}
+  .social{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin:1.4rem 0;}
+  .social a{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--parchment-dim);border:1px solid var(--hair);border-radius:2px;padding:.55rem .9rem;}
+  .social a:hover{color:var(--gold-bright);border-color:var(--gold);}
+  .footer .meta{font-family:var(--mono);font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;color:var(--parchment-dim);line-height:2;margin-top:1rem;}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){ .reveal{opacity:1;transform:none;transition:none;} }
+  @media (max-width:720px){
+    .duo,.platforms,.cta-row{grid-template-columns:1fr;}
+    .platforms{grid-template-columns:1fr;}
+    .station{grid-template-columns:1fr;gap:.9rem;}
+    .station .marker{flex-direction:row;align-items:center;gap:1rem;}
+    .station .glyph{width:34px;height:34px;}
+    .brand span,.brand-text{display:none;}
+    .hero .cta-row{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="topo" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="wrap">
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Nature and Nations — home">
+      <img src="nn-crest.png" alt="Nature & Nations crest" /><span class="brand-text">Nature&nbsp;<span>&amp;</span>&nbsp;Nations</span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a class="nav-link" href="#game">The Game</a>
+      <a class="nav-link" href="#world">World</a>
+      <a class="nav-link" href="#people">People</a>
+      <a class="nav-link" href="#build">Build</a>
+      <a class="nav-link" href="#vision">Vision</a>
+      <a class="nav-link" href="#faq">FAQ</a>
+      <!-- TODO: replace href="#release" with the Steam wishlist URL when the Steam page is live -->
+      <a class="nav-link nav-cta btn btn-primary" href="#release">Wishlist</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+  <!-- ===== HERO ===== -->
+  <header class="hero" id="top">
+    <img class="crest" src="nn-crest.png" alt="Nature & Nations crest: a teal and gold shield bearing a city skyline, mountains, and a pair of scales." />
+    <h1>Nature <span class="amp">&amp;</span> Nations</h1>
+    <p class="sub">A planet-scale city-builder &amp; nature simulation</p>
+    <p class="hook">Raise civilizations on a living, real-world Earth &mdash; and tend a world that answers back.</p>
+    <div class="badges">
+      <span class="badge"><strong>Coming 2026</strong></span>
+      <span class="badge">PC &middot; Steam</span>
+      <span class="badge">Single-player</span>
+      <span class="badge">Unreal Engine 5</span>
+    </div>
+    <div class="cta-row">
+      <!-- TODO: replace href="#release" with the Steam wishlist URL -->
+      <a class="btn btn-primary" href="#release">Wishlist on Steam</a>
+      <a class="btn btn-ghost" href="#game">Explore the game</a>
+    </div>
+  </header>
+
+  <!-- ===== THE GAME ===== -->
+  <section class="section" id="game">
+    <div class="container narrow reveal">
+      <p class="eyebrow">The Game</p>
+      <h2>A whole world to build, and to keep.</h2>
+      <p class="lede">Nature &amp; Nations is a planet-scale city-builder and nature simulation. You found
+        and grow communities &mdash; from a single hamlet to a nation &mdash; on a faithful model of the
+        real Earth, where weather, water, ecology, and people all run on real forces.</p>
+      <p>It blends three games into one: the joy of a <strong>city-builder</strong>, the depth of a
+        <strong>grand-strategy nation simulation</strong>, and the soul of a <strong>living ecology
+        sim</strong>. Every choice ripples outward &mdash; from one street to the whole world &mdash; and
+        the world remembers. Build well, tend faithfully, and watch a civilization rise; neglect it, and
+        watch it groan. The world is alive whether you are watching or not.</p>
+    </div>
+  </section>
+
+  <!-- ===== A LIVING EARTH ===== -->
+  <section class="section" id="world">
+    <div class="container">
+      <div class="narrow reveal">
+        <p class="eyebrow">A Living Earth</p>
+        <h2>The world is not a backdrop. It was here before you.</h2>
+        <p class="lede">A whole planet, modeled on the real Earth &mdash; its mountains, coasts, climate, and
+          sky, running on real forces rather than stagecraft.</p>
+      </div>
+      <div class="stations">
+        <article class="station reveal">
+          <div class="marker"><svg class="glyph" viewBox="0 0 46 46" fill="none" stroke="#c9a24b"><circle cx="23" cy="23" r="20" opacity=".35"/><circle cx="23" cy="23" r="13" opacity=".6"/><circle cx="23" cy="23" r="6"/></svg><div class="name">Planet Scale</div></div>
+          <div class="body"><h3>The whole Earth, from orbit to underfoot</h3>
+            <p>Stand on real geography drawn from true elevation data, and rise from street level to the
+              curve of the planet in one continuous sweep. Sculpt and shape the land &mdash; it remembers.</p></div>
+        </article>
+        <article class="station reveal">
+          <div class="marker"><svg class="glyph" viewBox="0 0 46 46" fill="none" stroke="#c9a24b"><path d="M5 34 L18 14 L27 26 L34 16 L41 34 Z" opacity=".75"/></svg><div class="name">Weather &amp; Seasons</div></div>
+          <div class="body"><h3>A true global climate</h3>
+            <p>Wind, pressure, and temperature flow from real atmospheric circulation. Storms form and
+              travel; seasons turn with the tilt of the world; deserts, monsoons, and snow belong where they
+              would on Earth.</p></div>
+        </article>
+        <article class="station reveal">
+          <div class="marker"><svg class="glyph" viewBox="0 0 46 46" fill="none" stroke="#c9a24b"><path d="M8 28 Q15 20 23 28 T38 28" opacity=".85"/><path d="M8 35 Q15 27 23 35 T38 35" opacity=".55"/></svg><div class="name">Water &amp; Sky</div></div>
+          <div class="body"><h3>Rivers carved by the land, skies that turn</h3>
+            <p>Water gathers where real elevation sends it &mdash; rivers run downhill, lakes fill basins. A
+              real sun crosses the sky, clouds drift with the wind, and on the right nights the aurora
+              answers to real space weather.</p></div>
+        </article>
+        <article class="station reveal">
+          <div class="marker"><svg class="glyph" viewBox="0 0 46 46" fill="none" stroke="#c9a24b"><path d="M23 8 C16 18 16 26 23 38 C30 26 30 18 23 8 Z" opacity=".7"/><path d="M23 8 v30" opacity=".5"/></svg><div class="name">Living Ecology</div></div>
+          <div class="body"><h3>Forests, grasslands, and the breath of the wind</h3>
+            <p>Vegetation belongs to its biome, swaying in the very wind the weather drives. The living world
+              fills the land you tend, and flourishes or fades by how you keep it.</p>
+            <details class="styledrop">
+              <summary>The world&rsquo;s biomes</summary>
+              <div class="stylegroup">
+                <p class="gh">Climate zones, from pole to equator</p>
+                <div class="styitem"><span class="sn">Taiga</span><span class="sp avail">In&nbsp;game</span><p class="sd">Vast boreal forests of spruce, pine, and fir &mdash; the first biome brought fully to life.</p></div>
+                <div class="styitem"><span class="sn">Arctic</span><span class="sp plan">Coming</span><p class="sd">Polar ice and permafrost at the ends of the Earth.</p></div>
+                <div class="styitem"><span class="sn">Tundra</span><span class="sp plan">Coming</span><p class="sd">Cold, treeless plains of moss, lichen, and hardy shrubs.</p></div>
+                <div class="styitem"><span class="sn">Temperate Forest</span><span class="sp plan">Coming</span><p class="sd">Broadleaf woodlands turning through four full seasons.</p></div>
+                <div class="styitem"><span class="sn">Temperate Grassland</span><span class="sp plan">Coming</span><p class="sd">Open prairies and rolling steppe.</p></div>
+                <div class="styitem"><span class="sn">Desert</span><span class="sp plan">Coming</span><p class="sd">Arid dunes and bare rock beneath a punishing sun.</p></div>
+                <div class="styitem"><span class="sn">Savanna</span><span class="sp plan">Coming</span><p class="sd">Tropical grasslands dotted with scattered trees.</p></div>
+                <div class="styitem"><span class="sn">Tropical Rainforest</span><span class="sp plan">Coming</span><p class="sd">Dense, humid jungle teeming with life.</p></div>
+                <div class="styitem"><span class="sn">Wetlands</span><span class="sp plan">Coming</span><p class="sd">Marshes, swamps, and water-laced lowlands.</p></div>
+                <div class="styitem"><span class="sn">Mountain</span><span class="sp plan">Coming</span><p class="sd">Alpine heights of bare rock and snow.</p></div>
+                <div class="styitem"><span class="sn">Coastal</span><span class="sp plan">Coming</span><p class="sd">The shifting edge where the land meets the sea.</p></div>
+                <div class="styitem"><span class="sn">Ocean</span><span class="sp plan">Coming</span><p class="sd">The open water that covers most of the world.</p></div>
+              </div>
+              <p class="drop-note">Lush vegetation and wildlife are rolling out biome by biome &mdash; Taiga first.</p>
+            </details>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE PEOPLE ===== -->
+  <section class="section" id="people">
+    <div class="container">
+      <div class="narrow reveal">
+        <p class="eyebrow">The People</p>
+        <h2>Every person is a soul, not a statistic.</h2>
+        <p class="lede">The people who fill your world are born, grow, age, and pass. They carry families,
+          faces, faith, and frailty &mdash; and they respond to how they are treated.</p>
+      </div>
+      <div class="stations">
+        <article class="station reveal">
+          <div class="marker"><svg class="glyph" viewBox="0 0 46 46" fill="none" stroke="#c9a24b"><circle cx="14" cy="15" r="5"/><circle cx="32" cy="15" r="5"/><circle cx="23" cy="33" r="5"/><path d="M14 20 L23 28 M32 20 L23 28" opacity=".55"/></svg><div class="name">Families &amp; Lineage</div></div>
+          <div class="body"><h3>Households form; bloodlines run deep</h3>
+            <p>People pair, raise families, and pass their traits to their children. Follow a lineage across
+              generations &mdash; the story of a place is the story of its families.</p></div>
+        </article>
+        <article class="station reveal">
+          <div class="marker"><svg class="glyph" viewBox="0 0 46 46" fill="none" stroke="#c9a24b"><circle cx="23" cy="18" r="9"/><path d="M14 38 Q23 30 32 38" opacity=".7"/></svg><div class="name">Faces &amp; Bodies</div></div>
+          <div class="body"><h3>No two people alike</h3>
+            <p>Every person has a distinct, inherited face and body across the full range of real human
+              variation. The crowd you walk through is genuinely a crowd of individuals.</p></div>
+        </article>
+        <article class="station reveal">
+          <div class="marker"><svg class="glyph" viewBox="0 0 46 46" fill="none" stroke="#c9a24b"><path d="M23 6 L40 16 v14 L23 40 L6 30 V16 Z" opacity=".4"/><path d="M23 6 v34 M6 16 l34 0" opacity=".55"/></svg><div class="name">Culture &amp; Belief</div></div>
+          <div class="body"><h3>Communities with their own way of life</h3>
+            <p>Regions carry their own faiths, customs, and dress, blending across borders the way real
+              cultures do. What a people values shapes how they live &mdash; and how they respond to you.</p></div>
+        </article>
+        <article class="station reveal">
+          <div class="marker"><svg class="glyph" viewBox="0 0 46 46" fill="none" stroke="#c9a24b"><path d="M23 38 C12 30 8 22 12 15 C15 10 21 11 23 16 C25 11 31 10 34 15 C38 22 34 30 23 38 Z" opacity=".7"/></svg><div class="name">Mind &amp; Wellbeing</div></div>
+          <div class="body"><h3>People flourish &mdash; or they suffer</h3>
+            <p>Crowding, neglect, and hardship weigh on people; safety, beauty, community, and care lift
+              them. A city that looks prosperous can still be quietly breaking its people &mdash; and you
+              will see it.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BUILD A CIVILIZATION ===== -->
+  <section class="section" id="build">
+    <div class="container">
+      <div class="narrow reveal">
+        <p class="eyebrow">Build a Civilization</p>
+        <h2>From a single street to a nation, you give the world its shape.</h2>
+        <p class="lede">You don&rsquo;t just place buildings. You found communities, name them, govern them,
+          and watch them take on a life of their own.</p>
+      </div>
+      <div class="stations">
+        <article class="station reveal">
+          <div class="marker"><svg class="glyph" viewBox="0 0 46 46" fill="none" stroke="#c9a24b"><rect x="8" y="8" width="30" height="30" opacity=".3"/><rect x="14" y="14" width="18" height="18" opacity=".55"/><rect x="20" y="20" width="6" height="6"/></svg><div class="name">Name Everything</div></div>
+          <div class="body"><h3>Charter a hamlet; raise it to a nation</h3>
+            <p>Draw the borders and give the names &mdash; hamlet, village, town, neighborhood, city, county,
+              province, country. Every tier is yours to found and shape.</p></div>
+        </article>
+        <article class="station reveal">
+          <div class="marker"><svg class="glyph" viewBox="0 0 46 46" fill="none" stroke="#c9a24b"><path d="M8 8 h30 v30 h-30 Z" opacity=".3"/><path d="M8 18 h30 M8 28 h30 M18 8 v30 M28 8 v30" opacity=".5"/></svg><div class="name">Zone &amp; Shape</div></div>
+          <div class="body"><h3>Decide how the land is used</h3>
+            <p>Paint zones, subdivide land into lots, and set the character of each district. The world fills
+              in around your intent.</p>
+            <details class="styledrop">
+              <summary>Zoning types</summary>
+              <div class="stylegroup">
+                <p class="gh">Zone types &mdash; each at low, medium, or high density</p>
+                <div class="styitem"><span class="sn">Residential</span><span class="sp avail">In&nbsp;game</span><p class="sd">Homes and neighborhoods, from quiet streets to dense apartment blocks.</p></div>
+                <div class="styitem"><span class="sn">Commercial</span><span class="sp avail">In&nbsp;game</span><p class="sd">Shops, services, and the businesses that draw daily life.</p></div>
+                <div class="styitem"><span class="sn">Industrial</span><span class="sp avail">In&nbsp;game</span><p class="sd">Factories, warehouses, and the productive backbone of a city.</p></div>
+                <div class="styitem"><span class="sn">Office</span><span class="sp avail">In&nbsp;game</span><p class="sd">Corporate and business-park workplaces.</p></div>
+                <div class="styitem"><span class="sn">Institutional</span><span class="sp avail">In&nbsp;game</span><p class="sd">Schools, hospitals, government, and civic life.</p></div>
+                <div class="styitem"><span class="sn">Park</span><span class="sp avail">In&nbsp;game</span><p class="sd">Green space, recreation, and room for the city to breathe.</p></div>
+                <div class="styitem"><span class="sn">Mixed-use</span><span class="sp cfg">Configurable</span><p class="sd">Shops below, homes above &mdash; configurable to combine any compatible zone types in the ratio you choose.</p></div>
+              </div>
+            </details>
+          </div>
+        </article>
+        <article class="station reveal">
+          <div class="marker"><svg class="glyph" viewBox="0 0 46 46" fill="none" stroke="#c9a24b"><path d="M12 38 V20 l11 -9 l11 9 v18 Z" opacity=".55"/><path d="M19 38 v-9 h8 v9" opacity=".7"/></svg><div class="name">Architecture</div></div>
+          <div class="body"><h3>Buildings raised, never copy-pasted</h3>
+            <p>Structures are generated to fit their lot and their style, so cities feel grown rather than
+              stamped out &mdash; soon assembled from modular, mix-and-match kits.</p>
+            <details class="styledrop">
+              <summary>The style library</summary>
+              <div class="stylegroup"><p class="gh">Available now</p>
+                <div class="styitem"><span class="sn">Modernist</span><span class="sp avail">In&nbsp;game</span><p class="sd">Clean concrete, glass, and steel &mdash; the first style with full modular kit support.</p></div></div>
+              <div class="stylegroup"><p class="gh">In development</p>
+                <div class="styitem"><span class="sn">Victorian Queen Anne</span><span class="sp dev">In&nbsp;dev</span><p class="sd">Ornate towers, turrets, gables, and gingerbread trim.</p></div>
+                <div class="styitem"><span class="sn">Gothic Castle</span><span class="sp dev">In&nbsp;dev</span><p class="sd">Pointed arches, stone walls, and soaring spires.</p></div></div>
+              <div class="stylegroup"><p class="gh">Planned</p>
+                <div class="styitem"><span class="sn">Mediterranean Spanish</span><span class="sp plan">Planned</span><p class="sd">Stucco walls, clay-tile roofs, sun-warmed courtyards.</p></div>
+                <div class="styitem"><span class="sn">Classical Colonial</span><span class="sp plan">Planned</span><p class="sd">Columns, symmetry, and stately proportion.</p></div>
+                <div class="styitem"><span class="sn">European Traditional</span><span class="sp plan">Planned</span><p class="sd">Old-world townhouses and tiled rooflines.</p></div>
+                <div class="styitem"><span class="sn">Storybook Cottage</span><span class="sp plan">Planned</span><p class="sd">Bellcast eaves and crooked, fairytale charm.</p></div>
+                <div class="styitem"><span class="sn">Chalet &amp; Cabin</span><span class="sp plan">Planned</span><p class="sd">Timber, steep roofs, and mountain warmth.</p></div>
+                <div class="styitem"><span class="sn">Elven</span><span class="sp plan">Planned</span><p class="sd">Flowing, organic forms &mdash; grown more than built.</p></div>
+                <div class="styitem"><span class="sn">Treehouse</span><span class="sp plan">Planned</span><p class="sd">Dwellings woven into the living canopy itself.</p></div></div>
+            </details>
+          </div>
+        </article>
+        <article class="station reveal">
+          <div class="marker"><svg class="glyph" viewBox="0 0 46 46" fill="none" stroke="#c9a24b"><path d="M6 40 C18 26 28 20 40 6" opacity=".8"/><path d="M11 40 C22 28 31 22 40 12" opacity=".4"/></svg><div class="name">Roads &amp; Networks</div></div>
+          <div class="body"><h3>Roads that flow like a real network</h3>
+            <p>Lay roads that snap, curve, and connect with the ease of drawing a line &mdash; intersections
+              resolve themselves, and lane markings follow real-world standards.</p>
+            <details class="styledrop">
+              <summary>Country marking standards</summary>
+              <div class="stylegroup"><p class="gh">Sourced designs</p>
+                <div class="styitem"><span class="sn">USA</span><span class="sp avail">In&nbsp;game</span><p class="sd">Yellow centre lines with white lane dividers.</p></div>
+                <div class="styitem"><span class="sn">Europe</span><span class="sp avail">In&nbsp;game</span><p class="sd">All-white markings with solid edge lines.</p></div>
+                <div class="styitem"><span class="sn">United Kingdom</span><span class="sp avail">In&nbsp;game</span><p class="sd">Broken white centre and lane lines.</p></div>
+                <div class="styitem"><span class="sn">China</span><span class="sp avail">In&nbsp;game</span><p class="sd">Single yellow centre with white lanes.</p></div>
+                <div class="styitem"><span class="sn">Japan</span><span class="sp avail">In&nbsp;game</span><p class="sd">White markings with regional lane patterns.</p></div>
+                <div class="styitem"><span class="sn">South Korea</span><span class="sp avail">In&nbsp;game</span><p class="sd">White centre and lanes with regional detailing.</p></div>
+                <div class="styitem"><span class="sn">Israel</span><span class="sp avail">In&nbsp;game</span><p class="sd">White markings to the regional standard.</p></div>
+                <div class="styitem"><span class="sn">Middle East</span><span class="sp avail">In&nbsp;game</span><p class="sd">White markings to the regional standard.</p></div></div>
+              <div class="stylegroup"><p class="gh">More countries &mdash; mapped to the closest design</p>
+                <div class="styitem"><span class="sn">Canada</span><span class="sp plan">US&nbsp;style</span><p class="sd">North American yellow double centre.</p></div>
+                <div class="styitem"><span class="sn">Australia</span><span class="sp plan">EU&nbsp;style</span><p class="sd">White centre markings.</p></div>
+                <div class="styitem"><span class="sn">Germany</span><span class="sp plan">EU&nbsp;style</span><p class="sd">White centre markings.</p></div>
+                <div class="styitem"><span class="sn">Brazil</span><span class="sp plan">Americas</span><p class="sd">Single yellow centre.</p></div>
+                <div class="styitem"><span class="sn">India</span><span class="sp plan">UK&nbsp;style</span><p class="sd">Dashed white centre.</p></div></div>
+            </details>
+          </div>
+        </article>
+        <article class="station reveal">
+          <div class="marker"><svg class="glyph" viewBox="0 0 46 46" fill="none" stroke="#c9a24b"><path d="M23 9 v28 M14 33 h18 M11 18 h24" opacity=".85"/><circle cx="23" cy="13" r="2.6" fill="#c9a24b"/><path d="M11 18 l-3 8 a6 4 0 0 0 9 0 Z" opacity=".7"/><path d="M35 18 l-3 8 a6 4 0 0 0 9 0 Z" opacity=".7"/></svg><div class="name">Govern</div></div>
+          <div class="body"><h3>Government that is alive</h3>
+            <p>Nations can take any real form &mdash; and none is simply &ldquo;good&rdquo; or
+              &ldquo;evil.&rdquo; Governments shift with their people, rise and fall, and can be reformed or
+              overthrown. Set policy and taxes, and feel the consequences travel up and down.</p>
+            <div class="duo" style="margin-top:1.6rem;">
+              <div class="card"><div class="k">Greenfield</div><h3>The only light</h3><p>Build the first and only civilization on an untouched world &mdash; just you, the land, and what you make of it.</p></div>
+              <div class="card"><div class="k">Living Nations</div><h3>A world alive around you</h3><p>Share the Earth with rival nations that build, trade, scheme, and war on their own.</p></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VISION ===== -->
+  <section class="section" id="vision">
+    <div class="container narrow reveal">
+      <p class="eyebrow">The Vision</p>
+      <h2>A world meant to be felt, not explained.</h2>
+      <p class="lede">We never put a meter on your screen for wonder. We build a world true and beautiful
+        enough that you feel it on your own &mdash; and tune everything toward two things held together.</p>
+      <div class="duo">
+        <div class="card"><div class="k">The first</div><h3>Awe</h3><p>The vastness and majesty &mdash; the feeling of being small before something ordered and beautiful beyond our making.</p></div>
+        <div class="card"><div class="k">The second</div><h3>Stewardship</h3><p>The world is entrusted to you, not handed over to be used up. You live in it, not above it.</p></div>
+      </div>
+      <p class="fuse">Held together, they make reverence &mdash; the care of someone who knows the garden is not their own.</p>
+    </div>
+  </section>
+
+  <!-- ===== RELEASE & PLATFORMS ===== -->
+  <section class="section release" id="release">
+    <div class="container reveal">
+      <p class="eyebrow" style="justify-content:center;">Release</p>
+      <p class="rel-when">Coming 2026</p>
+      <p class="container narrow" style="margin-inline:auto;margin-top:1.2rem;">Wishlist Nature &amp; Nations on
+        Steam to be notified the moment it launches &mdash; and to help it reach more builders and stewards.</p>
+      <div class="cta-row" style="justify-content:center;margin-top:1.6rem;">
+        <!-- TODO: replace href="#release" with the Steam wishlist URL when the Steam page is live -->
+        <a class="btn btn-primary" href="#release">Wishlist on Steam</a>
+        <span class="cta-note">Steam page coming soon</span>
+      </div>
+      <div class="platforms">
+        <div class="plat"><div class="when">At launch</div><div class="what">Windows</div><p>PC via Steam, built on Unreal Engine 5.8.</p></div>
+        <div class="plat"><div class="when">After launch</div><div class="what">macOS</div><p>Mac support arrives following the Windows release.</p></div>
+        <div class="plat"><div class="when">Planned</div><div class="what">Linux / Steam Deck</div><p>On the roadmap as the game grows.</p></div>
+      </div>
+      <p class="engine">Built on Unreal Engine 5.8</p>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" id="faq">
+    <div class="container narrow reveal">
+      <p class="eyebrow">Questions</p>
+      <h2>Frequently asked</h2>
+      <div class="faq" style="margin-top:1.5rem;">
+        <details><summary>What is Nature &amp; Nations?</summary><div class="ans">A planet-scale city-builder and nature simulation. You raise civilizations on a living, real-world Earth and tend a world that responds to every choice you make.</div></details>
+        <details><summary>What kind of game is it?</summary><div class="ans">It blends a city-builder, a grand-strategy nation simulation, and a living ecology sim, built on Unreal Engine 5.8.</div></details>
+        <details><summary>When does it release?</summary><div class="ans">Nature &amp; Nations is coming in 2026. Wishlist it on Steam to be notified the moment it launches.</div></details>
+        <details><summary>What platforms will it be on?</summary><div class="ans">It launches on PC (Windows) via Steam, with macOS support after launch and Linux / Steam Deck planned.</div></details>
+        <details><summary>Is it single-player?</summary><div class="ans">Yes. Play Greenfield mode, building the only civilization on an untouched world, or Living Nations mode in a world of rival AI nations that trade, scheme, and war.</div></details>
+        <details><summary>Does it use real Earth geography?</summary><div class="ans">Yes. The world is modeled on the real Earth, with true terrain, climate, weather, and biomes from pole to equator.</div></details>
+        <details><summary>How much will it cost?</summary><div class="ans">Pricing will be announced closer to launch. Wishlist on Steam to catch the announcement.</div></details>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container reveal">
+      <img src="nn-crest.png" alt="Nature & Nations crest" />
+      <p class="closing">Build a world worth tending.</p>
+      <nav class="social" aria-label="Follow Nature & Nations">
+        <!-- TODO: replace # with real profile URLs when channels are live -->
+        <a href="#" rel="noopener">X / Twitter</a>
+        <a href="#" rel="noopener">Reddit</a>
+        <a href="#" rel="noopener">Discord</a>
+        <a href="mailto:dantebarnett@natureandnations.com">Contact</a>
+      </nav>
+      <p class="meta">
+        &copy; 2026 Nature &amp; Nations &middot; A planet-scale city-builder &amp; nature simulation<br/>
+        dantebarnett@natureandnations.com
+      </p>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion:reduce)").matches;
+
+  /* ---------- topographic contour field ---------- */
+  var canvas=document.getElementById("topo"), ctx=canvas.getContext("2d");
+  var W=0,H=0,DPR=1,cell=20,cols=0,rows=0,grid=null,ox=0,oy=0,scrollOff=0,scrollTarget=0;
+  var NS=0.0038, LCOUNT=18, levels=[], _li;
+  for(_li=0;_li<LCOUNT;_li++){ levels.push(0.09 + 0.31*_li/(LCOUNT-1)); }
+  function hash(x,y){var n=x*374761393+y*668265263;n=(n^(n>>13));n=n*1274126177;return((n^(n>>16))>>>0)/4294967295;}
+  function smooth(t){return t*t*t*(t*(t*6-15)+10);}
+  function vnoise(x,y){var xi=Math.floor(x),yi=Math.floor(y),xf=x-xi,yf=y-yi;
+    var tl=hash(xi,yi),tr=hash(xi+1,yi),bl=hash(xi,yi+1),br=hash(xi+1,yi+1);
+    var u=smooth(xf),v=smooth(yf),top=tl+(tr-tl)*u,bot=bl+(br-bl)*u;return top+(bot-top)*v;}
+  function fbm(x,y){var amp=0.5,freq=1,sum=0,norm=0,i;for(i=0;i<3;i++){sum+=amp*vnoise(x*freq,y*freq);norm+=amp;amp*=0.5;freq*=2;}return sum/norm;}
+  function resize(){DPR=Math.min(window.devicePixelRatio||1,1.5);W=window.innerWidth;H=window.innerHeight;
+    canvas.width=Math.floor(W*DPR);canvas.height=Math.floor(H*DPR);canvas.style.width=W+"px";canvas.style.height=H+"px";
+    ctx.setTransform(DPR,0,0,DPR,0,0);cols=Math.ceil(W/cell)+2;rows=Math.ceil(H/cell)+2;grid=new Float32Array(cols*rows);}
+  function sampleGrid(){var j,i,idx=0;for(j=0;j<rows;j++){var py=j*cell;for(i=0;i<cols;i++){var px=i*cell;grid[idx++]=fbm((px+ox)*NS,(py+oy+scrollOff)*NS);}}}
+  function lp(a,b,T){var d=b-a;if(d===0)return 0.5;var u=(T-a)/d;return u<0?0:u>1?1:u;}
+  function drawLevel(T,lvl){var i,j;ctx.beginPath();
+    for(j=0;j<rows-1;j++){for(i=0;i<cols-1;i++){var x=i*cell,y=j*cell;
+      var a=grid[j*cols+i],b=grid[j*cols+i+1],c=grid[(j+1)*cols+i+1],d=grid[(j+1)*cols+i];
+      var ci=(a>T?8:0)|(b>T?4:0)|(c>T?2:0)|(d>T?1:0);if(ci===0||ci===15)continue;
+      var tx=x+cell*lp(a,b,T),ty=y,rx=x+cell,ry=y+cell*lp(b,c,T),bx=x+cell*lp(d,c,T),by=y+cell,lx=x,ly=y+cell*lp(a,d,T);
+      switch(ci){
+        case 1:case 14:ctx.moveTo(lx,ly);ctx.lineTo(bx,by);break;
+        case 2:case 13:ctx.moveTo(bx,by);ctx.lineTo(rx,ry);break;
+        case 3:case 12:ctx.moveTo(lx,ly);ctx.lineTo(rx,ry);break;
+        case 4:case 11:ctx.moveTo(tx,ty);ctx.lineTo(rx,ry);break;
+        case 6:case 9:ctx.moveTo(tx,ty);ctx.lineTo(bx,by);break;
+        case 7:case 8:ctx.moveTo(lx,ly);ctx.lineTo(tx,ty);break;
+        case 5:ctx.moveTo(lx,ly);ctx.lineTo(tx,ty);ctx.moveTo(bx,by);ctx.lineTo(rx,ry);break;
+        case 10:ctx.moveTo(tx,ty);ctx.lineTo(rx,ry);ctx.moveTo(lx,ly);ctx.lineTo(bx,by);break;
+      }}}
+    var t=lvl/(levels.length-1), isIdx=(lvl%4===0);
+    var r=Math.round(201+29*t), g=Math.round(162+43*t), b=Math.round(75+68*t);
+    var a=isIdx?(0.17+0.10*t):(0.08+0.05*t);
+    ctx.lineWidth=isIdx?1.1:0.65;ctx.strokeStyle="rgba("+r+","+g+","+b+","+a.toFixed(3)+")";ctx.stroke();}
+  function render(){ctx.clearRect(0,0,W,H);sampleGrid();ctx.lineCap="round";ctx.lineJoin="round";for(var k=0;k<levels.length;k++){drawLevel(levels[k],k);}}
+  var last=0;
+  function loop(t){var dt=t-last;last=t;if(dt>40)dt=40;ox+=dt*0.008;oy+=dt*0.0035;scrollOff+=(scrollTarget-scrollOff)*0.08;render();requestAnimationFrame(loop);}
+  function onScroll(){scrollTarget=window.scrollY*0.06;if(reduce){scrollOff=scrollTarget;render();}}
+  var rT;window.addEventListener("resize",function(){clearTimeout(rT);rT=setTimeout(function(){resize();render();},120);});
+  window.addEventListener("scroll",onScroll,{passive:true});
+  resize();if(reduce){render();}else{requestAnimationFrame(loop);}
+
+  /* ---------- scroll reveals ---------- */
+  if("IntersectionObserver" in window && !reduce){
+    var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:0.12,rootMargin:"0px 0px -6% 0px"});
+    document.querySelectorAll(".reveal").forEach(function(el){io.observe(el);});
+  } else { document.querySelectorAll(".reveal").forEach(function(el){el.classList.add("in");}); }
+
+  /* ---------- scroll-spy nav ---------- */
+  var secs=Array.prototype.slice.call(document.querySelectorAll("main section[id], header.hero[id]"));
+  var linkFor={}; document.querySelectorAll(".nav-link").forEach(function(l){var h=l.getAttribute("href");if(h&&h.charAt(0)==="#")linkFor[h.slice(1)]=l;});
+  if("IntersectionObserver" in window){
+    var spy=new IntersectionObserver(function(entries){entries.forEach(function(e){
+      if(e.isIntersecting){var id=e.target.id;Object.keys(linkFor).forEach(function(k){linkFor[k].classList.toggle("active",k===id);});}
+    });},{rootMargin:"-45% 0px -50% 0px"});
+    secs.forEach(function(s){spy.observe(s);});
+  }
+})();
+</script>
+</body>
+</html>
