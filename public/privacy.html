@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Privacy Policy — Nature &amp; Nations</title>
+<meta name="description" content="How Nature & Nations handles your data on natureandnations.com and in the game. A plain-language privacy policy covering what we collect, why, and your rights (GDPR / CCPA)." />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#07201f" />
+<link rel="canonical" href="https://natureandnations.com/privacy" />
+<link rel="icon" href="favicon.ico?v=3" sizes="any" />
+<link rel="icon" type="image/png" sizes="256x256" href="favicon.png?v=3" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=3" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Spectral:ital,wght@0,400;0,500;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --abyss:#07201f; --petrol:#0d3330; --petrol-lift:#15514b;
+    --gold:#c9a24b; --gold-bright:#e6cd8f; --parchment:#ece3cf;
+    --parchment-dim:rgba(236,227,207,.72); --hair:rgba(201,162,75,.26);
+    --display:"Fraunces",Georgia,"Times New Roman",serif;
+    --prose:"Spectral",Georgia,serif;
+    --mono:"Space Mono",ui-monospace,"Courier New",monospace;
+    --measure:70ch;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+  body{margin:0;background:radial-gradient(120% 90% at 50% -10%,#0b2b29 0%,var(--abyss) 60%) fixed,var(--abyss);
+    color:var(--parchment);font-family:var(--prose);font-size:clamp(1rem,.95rem + .25vw,1.12rem);
+    line-height:1.72;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:var(--gold-bright);text-decoration:none;border-bottom:1px solid var(--hair);}
+  a:hover{color:var(--gold-bright);border-color:var(--gold);}
+  .container{width:min(100% - 2.4rem,820px);margin-inline:auto;}
+
+  /* top bar */
+  .topbar{border-bottom:1px solid var(--hair);}
+  .topbar .container{display:flex;align-items:center;gap:.8rem;padding-block:1.1rem;}
+  .topbar img{height:40px;width:auto;}
+  .topbar .brand-text{font-family:var(--display);font-weight:600;letter-spacing:-.01em;color:var(--parchment);font-size:1.05rem;}
+  .topbar .home{margin-left:auto;font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--parchment-dim);border:1px solid var(--hair);border-radius:2px;padding:.5rem .85rem;}
+  .topbar .home:hover{color:var(--gold-bright);border-color:var(--gold);}
+
+  /* document */
+  main{padding-block:clamp(2.6rem,7vh,5rem);}
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin:0 0 1rem;display:flex;align-items:center;gap:.7rem;}
+  .eyebrow::before{content:"";width:1.6rem;height:1px;background:var(--gold);opacity:.7;}
+  h1{font-family:var(--display);font-weight:600;line-height:1.05;letter-spacing:-.015em;margin:0 0 .5rem;color:var(--parchment);font-size:clamp(2rem,1.4rem + 2.4vw,3rem);}
+  h2{font-family:var(--display);font-weight:600;line-height:1.1;letter-spacing:-.01em;margin:2.6rem 0 .8rem;color:var(--parchment);font-size:clamp(1.35rem,1.1rem + 1vw,1.75rem);}
+  h3{font-family:var(--display);font-weight:600;margin:1.6rem 0 .5rem;color:var(--parchment);font-size:1.12rem;}
+  p,li{color:var(--parchment-dim);}
+  p{margin:0 0 1.05rem;max-width:var(--measure);}
+  ul{max-width:var(--measure);padding-left:1.2rem;margin:0 0 1.05rem;}
+  li{margin-bottom:.5rem;}
+  strong{color:var(--parchment);font-weight:500;}
+  em{font-style:italic;}
+  .updated{font-family:var(--mono);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--parchment-dim);margin:0 0 2rem;}
+  .lede{font-size:1.14rem;color:var(--parchment);max-width:var(--measure);}
+  .callout{border:1px solid var(--hair);border-left:2px solid var(--gold);border-radius:2px;padding:1rem 1.2rem;margin:1.4rem 0;background:rgba(255,255,255,.015);}
+  .callout p{margin:0;max-width:none;}
+
+  /* footer */
+  .footer{padding-block:clamp(2.6rem,6vh,4.5rem);text-align:center;border-top:1px solid var(--gold);margin-top:3rem;}
+  .footer img{height:72px;width:auto;margin-bottom:1rem;opacity:.95;}
+  .social{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin:1.2rem 0;}
+  .social a{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--parchment-dim);border:1px solid var(--hair);border-radius:2px;padding:.5rem .85rem;border-bottom:1px solid var(--hair);}
+  .social a:hover{color:var(--gold-bright);border-color:var(--gold);}
+  .footer .meta{font-family:var(--mono);font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;color:var(--parchment-dim);line-height:2;margin-top:1rem;}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container">
+    <img src="favicon.png?v=3" alt="Nature & Nations mark" />
+    <span class="brand-text">Nature &amp; Nations</span>
+    <a class="home" href="/">&larr; Home</a>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <p class="eyebrow">Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: July 1, 2026</p>
+
+    <p class="lede">Nature &amp; Nations is made by one person, and this policy is written the same way &mdash;
+      plainly, and only about what is actually true. The short version: this website sets <strong>no cookies</strong>,
+      runs <strong>no advertising or analytics trackers</strong>, and we do not sell your data. Below is the full detail.</p>
+
+    <h2>1. Who we are</h2>
+    <p>&ldquo;Nature &amp; Nations,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; and &ldquo;our&rdquo; refer to
+      <strong>Dante Barnett</strong>, an independent game developer trading as Nature &amp; Nations, the developer of
+      the game <em>Nature &amp; Nations</em> and the operator of <strong>natureandnations.com</strong>. We are the data
+      controller for the personal data described in this policy. You can reach us at
+      <a href="mailto:dantebarnett@natureandnations.com">dantebarnett@natureandnations.com</a>.</p>
+
+    <h2>2. What this policy covers</h2>
+    <p>This policy covers our <strong>website</strong> (natureandnations.com) and our <strong>game</strong>. It does
+      <em>not</em> cover third-party services that operate under their own privacy policies &mdash; most importantly the
+      <strong>Steam</strong> store and client (operated by Valve), and any social platforms we link to, such as
+      <strong>X</strong> and <strong>Reddit</strong>. When you buy, download, or run the game through Steam, Valve
+      collects and processes your data as an independent controller under
+      <a href="https://store.steampowered.com/privacy_agreement/" target="_blank" rel="noopener noreferrer">Valve&rsquo;s Privacy Policy</a>.</p>
+
+    <h2>3. Information we collect</h2>
+
+    <h3>On the website</h3>
+    <p>The website is a static page with no accounts, no login, and no forms. We do not set cookies and do not use
+      advertising or analytics trackers. Data is nonetheless processed in two ordinary ways:</p>
+    <ul>
+      <li><strong>Server and security logs (Cloudflare).</strong> The site is hosted and protected by Cloudflare.
+        To deliver pages and defend against attacks, Cloudflare automatically processes technical data such as your
+        <strong>IP address</strong>, browser/user-agent, the page requested, and timestamps. This is standard hosting
+        activity.</li>
+      <li><strong>Web fonts (Google Fonts).</strong> The site loads typefaces from Google Fonts, which means your
+        browser contacts Google&rsquo;s servers and Google receives your IP address to serve the font files. See
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google&rsquo;s Privacy Policy</a>.</li>
+    </ul>
+
+    <h3>If you contact us</h3>
+    <p>If you email us, we receive your <strong>email address</strong>, your message, and anything you choose to include.
+      Our email runs on <strong>Google Workspace</strong>. We use this only to read and reply to you.</p>
+
+    <h3>In the game</h3>
+    <p>The game is not yet released. It is designed to be played primarily <strong>offline and locally</strong> &mdash;
+      your saves and settings live on your own device. We do <em>not</em> require an account with us to play. If a
+      released version of the game introduces optional features that collect data (for example anonymous crash reports
+      to help us fix bugs, or cloud saves through Steam), we will describe exactly what is collected and why &mdash; both
+      in the game and by updating this policy &mdash; before that feature is used. Purchases, Steam accounts, and Steam
+      cloud saves are handled by <strong>Steam/Valve</strong> under Valve&rsquo;s privacy policy; we do not handle your
+      payment details.</p>
+
+    <h2>4. Why we process data, and our legal bases</h2>
+    <p>Where the EU/UK GDPR applies, we rely on these legal bases:</p>
+    <ul>
+      <li><strong>Legitimate interests</strong> &mdash; to operate, secure, and maintain the website (server logs,
+        attack prevention) and to understand aggregate interest in the game.</li>
+      <li><strong>Legitimate interests</strong> &mdash; to read and reply when you voluntarily email us.</li>
+      <li><strong>Consent</strong> &mdash; if you later opt in to any data-collecting game feature. You may withdraw
+        consent at any time where processing is based on consent.</li>
+      <li><strong>Contract</strong> &mdash; for game purchases, which are performed by Valve/Steam to deliver the product
+        you bought.</li>
+    </ul>
+
+    <h2>5. Who we share data with</h2>
+    <p>We do <strong>not sell</strong> or rent your personal data, and we do not share it for advertising. Data is only
+      processed by the service providers that make the site and game work:</p>
+    <ul>
+      <li><strong>Cloudflare</strong> &mdash; website hosting, content delivery, and security.</li>
+      <li><strong>Google</strong> &mdash; Google Fonts (typefaces) and Google Workspace (our email).</li>
+      <li><strong>Valve / Steam</strong> &mdash; storefront, purchases, downloads, and optional cloud saves for the game.</li>
+    </ul>
+    <p>These providers act as our processors or as independent controllers under their own policies. We may also disclose
+      information if required by law, or to protect our rights, safety, or property.</p>
+
+    <h2>6. International data transfers</h2>
+    <p>We are based in the United States, and our providers (Cloudflare, Google, Valve) operate globally. If you access
+      the site or game from outside the U.S., your data may be processed in the U.S. or other countries. Those providers
+      handle international transfers under their own privacy policies and service terms.</p>
+
+    <h2>7. Data retention</h2>
+    <p>We keep personal data only as long as needed for the purpose it was collected. Cloudflare handles server and
+      security logs under its own service terms and privacy practices. Emails you send us are kept as long as needed to
+      handle your request and for our records, then deleted on request. Any future in-game data will have its retention
+      described when that feature launches.</p>
+
+    <h2>8. Your rights</h2>
+    <p>Depending on where you live, you may have some or all of the following rights over your personal data:</p>
+    <ul>
+      <li><strong>Access</strong> &mdash; ask what personal data we hold about you.</li>
+      <li><strong>Correction</strong> &mdash; have inaccurate data fixed.</li>
+      <li><strong>Deletion</strong> &mdash; ask us to erase your data.</li>
+      <li><strong>Restriction &amp; objection</strong> &mdash; limit or object to certain processing.</li>
+      <li><strong>Portability</strong> &mdash; receive your data in a portable format.</li>
+      <li><strong>Withdraw consent</strong> &mdash; at any time, where processing is based on consent.</li>
+    </ul>
+    <p><strong>EU/UK (GDPR):</strong> you may also lodge a complaint with your local data protection authority.</p>
+    <p><strong>California (CCPA/CPRA):</strong> you have the right to know, delete, and correct your personal information,
+      and to not be discriminated against for exercising these rights. <strong>We do not sell or share your personal
+      information</strong> as those terms are defined under California law, and we do not offer financial incentives for data.</p>
+    <p>To exercise any right, email <a href="mailto:dantebarnett@natureandnations.com">dantebarnett@natureandnations.com</a>.
+      We will respond within the timeframe required by applicable law. We may need to verify your identity first.</p>
+
+    <h2>9. Do Not Track &amp; Global Privacy Control</h2>
+    <p>Because we do not track visitors across sites or serve targeted advertising, there is nothing for a
+      &ldquo;Do Not Track&rdquo; or Global Privacy Control (GPC) signal to opt out of. We honor these signals by simply
+      not doing that kind of tracking in the first place.</p>
+
+    <h2>10. Children&rsquo;s privacy</h2>
+    <p>The game is rated for <strong>Teen (ages 13+)</strong>, and neither the website nor the game is directed to
+      children under 13. We do not knowingly collect personal data from children under 13 (or under 16 in regions where
+      that is the applicable age of consent). If you believe a child has provided us personal data, contact us and we
+      will delete it. <em>An optional age-gated Mature (17+) DLC is planned after launch.</em></p>
+
+    <h2>11. Security</h2>
+    <p>We use HTTPS and rely on established providers including Cloudflare, Google, and Valve. No method of transmission
+      or storage is perfectly secure, but we take reasonable measures to protect the limited data we handle.</p>
+
+    <h2>12. Links to other sites</h2>
+    <p>Our website and materials may link to third-party sites (such as Steam, X, and Reddit). We are not responsible for
+      their content or privacy practices; please review their policies.</p>
+
+    <h2>13. Changes to this policy</h2>
+    <p>We may update this policy as the website and game evolve &mdash; especially before the game collects any new data.
+      When we do, we will revise the &ldquo;Last updated&rdquo; date above, and for significant changes we will note it on
+      the website. The updated policy applies from the &ldquo;Last updated&rdquo; date shown above; if a future change
+      requires your consent, we will ask for it.</p>
+
+    <h2>14. Contact</h2>
+    <p>Questions about this policy or your data? Email
+      <a href="mailto:dantebarnett@natureandnations.com">dantebarnett@natureandnations.com</a>.</p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <img src="nn-crest.png" alt="Nature & Nations crest" />
+    <nav class="social" aria-label="Nature & Nations links">
+      <a href="/">Home</a>
+      <a href="https://x.com/Nature_Nations" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+      <a href="https://www.reddit.com/r/NatureAndNationsHQ/" target="_blank" rel="noopener noreferrer">Reddit</a>
+      <a href="mailto:dantebarnett@natureandnations.com">Contact</a>
+    </nav>
+    <p class="meta">
+      &copy; 2026 Nature &amp; Nations &middot; A planet-scale city-builder &amp; nature simulation<br/>
+      dantebarnett@natureandnations.com
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
